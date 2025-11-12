@@ -65,6 +65,8 @@ header {
     flex-grow: 1; /* Ocupa todo el espacio disponible, empujando el form al fondo */
     padding: 20px;
     overflow-y: auto; /* Scroll para los mensajes */
+    display: flex; /* <-- Añadido para alinear los mensajes */
+    flex-direction: column; /* <-- Añadido para alinear los mensajes */
 }
 
 #chat-formulario {
@@ -103,16 +105,22 @@ header {
     border-radius: 15px;
     margin-bottom: 10px;
     max-width: 80%;
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+
+/* Estilo para los párrafos dentro del saludo inicial */
+.mensaje.ia p {
+    margin: 8px 0; /* Espacio entre las líneas de idioma */
 }
 
 .mensaje.ia {
     background-color: #e5e5ea;
     color: #000;
-    align-self: flex-start;
+    align-self: flex-start; /* Alinear a la izquierda */
 }
 
 .mensaje.usuario {
     background-color: #007aff;
     color: white;
-    align-self: flex-end; /* Alinear a la derecha (necesitará flex en el visor) */
+    align-self: flex-end; /* Alinear a la derecha */
 }
